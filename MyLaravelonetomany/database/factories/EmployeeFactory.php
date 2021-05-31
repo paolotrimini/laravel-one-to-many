@@ -2,12 +2,13 @@
 
 /** @var \Illuminate\Database\Eloquent\Factory $factory */
 
-use App\Task;
+use App\Employee;
 use Faker\Generator as Faker;
 
-$factory->define(Task::class, function (Faker $faker) {
+$factory->define(Employee::class, function (Faker $faker) {
     return [
-        'title' => $faker-> word,
-        'descriptions' => $faker-> sentence,
+        'firstname' => $faker-> word,
+        'lastname' => $faker-> word,
+        'ral' => $faker-> numberBetween(1, 10000)
     ];
 });
